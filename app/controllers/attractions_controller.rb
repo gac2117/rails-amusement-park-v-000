@@ -1,6 +1,7 @@
 class AttractionsController < ApplicationController
   def index
     @attractions = Attraction.all
+    @user = User.find_by(id: current_user)
   end
 
   def show
@@ -18,7 +19,7 @@ class AttractionsController < ApplicationController
       redirect_to attractions_path
     else
       render :new
-    end 
+    end
   end
 
   private
