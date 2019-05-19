@@ -9,6 +9,6 @@
 <br>
 <% if @user.admin %>
 <p><strong>ADMIN</strong></p>
+<%= link_to "See attractions", attractions_path, method: :get %>
 <% end %>
 <%= link_to "Log Out", signout_path, method: :delete %><br><br>
-<%= link_to "See attractions", attractions_path, method: :get %>
