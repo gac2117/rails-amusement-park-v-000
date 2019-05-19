@@ -31,6 +31,7 @@ class AttractionsController < ApplicationController
       redirect_to attraction_path(@attraction)
     else
       render :edit 
+    end
   end
 
   private
