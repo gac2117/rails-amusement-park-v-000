@@ -29,6 +29,8 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find_by(id: params[:id])
     if @attraction.update(attraction_params)
       redirect_to attraction_path(@attraction)
+    else
+      render :edit 
   end
 
   private
