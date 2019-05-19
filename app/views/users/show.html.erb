@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+
 <h1><%= @user.name %></h1>
 <p>Height (in inches): <%= @user.height %></p>
 <p>Mood: <%= @user.mood %></p>
