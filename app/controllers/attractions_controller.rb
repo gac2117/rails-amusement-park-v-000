@@ -28,7 +28,6 @@ class AttractionsController < ApplicationController
 
   def update
     @attraction = Attraction.find_by(id: params[:id])
-    binding.pry
     if @attraction.update(attraction_params)
       redirect_to attraction_path(@attraction)
     else
