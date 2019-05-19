@@ -16,7 +16,7 @@ class AttractionsController < ApplicationController
   def create
     @attraction = Attraction.new(attraction_params)
     if @attraction.save
-      redirect_to attractions_path
+      redirect_to attraction_path(@attraction)
     else
       render :new
     end
