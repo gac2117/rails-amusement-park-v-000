@@ -29,8 +29,8 @@ class AttractionsController < ApplicationController
 
   def update
     @attraction = Attraction.find_by(id: params[:id])
-    binding.pry
     if @attraction.update(attraction_params)
+      binding.pry
       redirect_to @attraction
     else
       render :edit
