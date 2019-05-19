@@ -30,7 +30,7 @@ class AttractionsController < ApplicationController
     if @attraction.update(attraction_params)
       redirect_to attraction_path(@attraction)
     else
-      render :edit 
+      render :edit
     end
   end
 
