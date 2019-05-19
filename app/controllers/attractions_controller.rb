@@ -23,6 +23,7 @@ class AttractionsController < ApplicationController
   end
 
   def edit
+    @attraction = Attraction.find_by(id: params[:id])
   end
 
   def update
